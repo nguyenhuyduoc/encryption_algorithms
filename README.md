@@ -21,14 +21,12 @@ encryption-algorithms/
 │   ├── rsa.py
 │   ├── ecc.py
 │   ├── chacha20.py
-│   ├── kyber.py
-│   └── benchmark.py
+│   └── kyber.py
 ├── data/
 │   └── input.txt
 ├── results/
 │   └── report.txt
-└── tests/
-    └── (unit tests for each algorithm module)
+└── benchmark.py
 ```
 
 - **requirements.txt**: Python dependencies required by the project.
