@@ -75,17 +75,7 @@ Alternatively, use your system's package manager:
   sudo apt-get install python3-pip python3-numpy python3-matplotlib
   pip install cryptography oqs
   ```
-- **Fedora:**
-  ```bash
-  sudo dnf install python3-pip python3-numpy python3-matplotlib
-  pip install cryptography oqs
-  ```
-- **macOS (Homebrew):**
-  ```bash
-  brew install python3
-  pip3 install numpy matplotlib
-  pip3 install cryptography oqs
-  ```
+
 
 ## Installing liboqs from Source
 
