@@ -112,7 +112,7 @@ python -c "import oqs; print(oqs.get_enabled_KEMs())"
    - Execute the benchmark script:
 
      ```bash
-     python src/benchmark.py
+     python3 src/benchmark.py
      ```
 
    - The script will:
