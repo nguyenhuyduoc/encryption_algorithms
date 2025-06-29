@@ -56,7 +56,62 @@ This installs:
 - `oqs`
 - `numpy`
 - `matplotlib` (used for plotting, if needed in extensions)
+# Manual Installation Guide
 
+If automatic installation fails, you can install packages manually:
+
+```bash
+pip install cryptography
+pip install oqs
+pip install numpy
+pip install matplotlib
+```
+
+Alternatively, use your system's package manager:
+
+- **Debian/Ubuntu:**
+  ```bash
+  sudo apt-get update
+  sudo apt-get install python3-pip python3-numpy python3-matplotlib
+  pip install cryptography oqs
+  ```
+- **Fedora:**
+  ```bash
+  sudo dnf install python3-pip python3-numpy python3-matplotlib
+  pip install cryptography oqs
+  ```
+- **macOS (Homebrew):**
+  ```bash
+  brew install python3
+  pip3 install numpy matplotlib
+  pip3 install cryptography oqs
+  ```
+
+## Installing liboqs from Source
+
+To get the latest **liboqs** C library (and Python bindings) directly from GitHub:
+
+```bash
+# 1. Clone the repository
+git clone --branch main https://github.com/open-quantum-safe/liboqs.git
+cd liboqs
+
+# 2. Build and install the core library
+mkdir build && cd build
+cmake -DCMAKE_INSTALL_PREFIX=/usr/local ..
+make -j$(nproc)
+sudo make install
+
+# 3. (Optional) Update linker cache
+sudo ldconfig
+
+# 4. Install Python bindings
+cd ../python
+pip install .
+
+# 5. Verify installation
+python -c "import oqs; print(oqs.get_enabled_KEMs())"
+```
 ## Usage
 
 1. **Prepare Input**
